@@ -17,34 +17,43 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <view key="tableHeaderView" contentMode="scaleToFill" id="699-1V-YEY">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="68"/>
+                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vba-sG-ksW">
+                                    <rect key="frame" x="149" y="38" width="76" height="30"/>
+                                    <state key="normal" title="Randomize"/>
+                                    <connections>
+                                        <action selector="randomizeButtonTapped:" destination="BEo-7P-tfs" eventType="touchUpInside" id="GiZ-Pm-Ri9"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <constraints>
+                                <constraint firstItem="vba-sG-ksW" firstAttribute="top" secondItem="699-1V-YEY" secondAttribute="top" constant="38" id="PzS-iR-UUr"/>
+                                <constraint firstItem="vba-sG-ksW" firstAttribute="leading" secondItem="699-1V-YEY" secondAttribute="leading" constant="149" id="TCf-dQ-qxc"/>
+                                <constraint firstAttribute="bottom" secondItem="vba-sG-ksW" secondAttribute="bottom" id="bzh-1R-hBf"/>
+                                <constraint firstAttribute="trailing" secondItem="vba-sG-ksW" secondAttribute="trailing" constant="150" id="e3a-7k-Df9"/>
+                            </constraints>
+                        </view>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="randomCell" rowHeight="74" id="FOh-Ix-fAb" customClass="PairTableViewCell" customModule="PairRandomizer" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="28" width="375" height="74"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="randomCell" textLabel="5vY-rP-RFb" rowHeight="95" style="IBUITableViewCellStyleDefault" id="FOh-Ix-fAb">
+                                <rect key="frame" x="0.0" y="96" width="375" height="95"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="FOh-Ix-fAb" id="UZM-ST-xdO">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="73.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="94.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="(Name)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cAN-EO-GY9">
-                                            <rect key="frame" x="16" y="26" width="58" height="21"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" insetsLayoutMarginsFromSafeArea="NO" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5vY-rP-RFb">
+                                            <rect key="frame" x="16" y="0.0" width="343" height="94.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
                                         </label>
-                                        <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="C6g-ah-e4b">
-                                            <rect key="frame" x="149" y="33" width="76" height="30"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <state key="normal" title="Randomize"/>
-                                            <connections>
-                                                <action selector="randomizeButtonTapped:" destination="FOh-Ix-fAb" eventType="touchUpInside" id="JnD-ad-523"/>
-                                            </connections>
-                                        </button>
                                     </subviews>
                                 </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="nameLabel" destination="cAN-EO-GY9" id="Hut-TC-pvD"/>
-                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <sections/>
@@ -53,17 +62,13 @@
                             <outlet property="delegate" destination="BEo-7P-tfs" id="fW0-PN-uoq"/>
                         </connections>
                     </tableView>
-                    <toolbarItems>
-                        <barButtonItem style="plain" id="sPE-TZ-8Ld">
-                            <button key="customView" opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="jqR-zt-oFY">
-                                <rect key="frame" x="16" y="7" width="343" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Button"/>
-                            </button>
-                        </barButtonItem>
-                    </toolbarItems>
+                    <toolbarItems/>
                     <navigationItem key="navigationItem" title="Root View Controller" id="FiF-DE-cBS">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="a52-JV-rbJ"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="a52-JV-rbJ">
+                            <connections>
+                                <action selector="addButtonTaped:" destination="BEo-7P-tfs" id="qYP-Xe-1nP"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>

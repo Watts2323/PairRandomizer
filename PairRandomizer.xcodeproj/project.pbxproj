@@ -14,7 +14,6 @@
 		198BCEFE219F280500189E98 /* Pair.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198BCEFD219F280500189E98 /* Pair.swift */; };
 		198BCF01219F281C00189E98 /* PairController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198BCF00219F281C00189E98 /* PairController.swift */; };
 		198BCF04219F29AB00189E98 /* PairListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198BCF03219F29AB00189E98 /* PairListTableViewController.swift */; };
-		198BCF07219F29E200189E98 /* PairTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 198BCF06219F29E200189E98 /* PairTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,7 +26,6 @@
 		198BCEFD219F280500189E98 /* Pair.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pair.swift; sourceTree = "<group>"; };
 		198BCF00219F281C00189E98 /* PairController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairController.swift; sourceTree = "<group>"; };
 		198BCF03219F29AB00189E98 /* PairListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairListTableViewController.swift; sourceTree = "<group>"; };
-		198BCF06219F29E200189E98 /* PairTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PairTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,7 +115,6 @@
 		198BCF08219F29E500189E98 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				198BCF06219F29E200189E98 /* PairTableViewCell.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -193,7 +190,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				198BCF07219F29E200189E98 /* PairTableViewCell.swift in Sources */,
 				198BCF01219F281C00189E98 /* PairController.swift in Sources */,
 				198BCF04219F29AB00189E98 /* PairListTableViewController.swift in Sources */,
 				198BCEEA219F248600189E98 /* AppDelegate.swift in Sources */,
