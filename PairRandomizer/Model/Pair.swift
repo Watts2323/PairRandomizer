@@ -25,6 +25,8 @@ class Pair {
 
 extension Pair: Equatable {
     static func == (lhs: Pair, rhs: Pair) -> Bool {
-        return lhs.firstname == rhs.firstname && lhs.lastName == rhs.lastName
+        if lhs.firstname != rhs.firstname { return false}
+        if lhs.lastName != rhs.lastName { return false }
+        return true
     }
 }
