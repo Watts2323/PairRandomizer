@@ -7,3 +7,24 @@
 //
 
 import Foundation
+
+class Pair {
+    let firstname: String
+    let lastName: String
+    
+    init(firstName: String, lastName: String) {
+        self.firstname = firstName
+        self.lastName = lastName
+    }
+    
+//    struct Pairs {
+//        let sameLetter: String
+//        let doubleLetter: String
+//    }
+}
+
+extension Pair: Equatable {
+    static func == (lhs: Pair, rhs: Pair) -> Bool {
+        return lhs.firstname == rhs.firstname && lhs.lastName == rhs.lastName
+    }
+}
